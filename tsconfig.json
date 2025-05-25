@@ -1,0 +1,16 @@
+{
+  "files": [],
+  "compilerOptions": {
+    "target": "ESNext",
+    "module":"ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["esnext", "dom"],
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true
+  },
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/env.d.ts"]
+}

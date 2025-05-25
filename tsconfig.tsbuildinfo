@@ -1,0 +1,1 @@
+{"root":["./src/env.d.ts","./src/vite-env.d.ts","./src/utils/api.ts","./src/utils/clipboard.ts","./src/utils/webhook.ts","./src/alphapage.tsx","./src/app.tsx","./src/homepage.tsx","./src/viewmarkdown.tsx","./src/main.tsx","./src/assets/assets.tsx","./src/components/loader.tsx","./src/components/markdowntutorial.tsx","./src/components/modal.tsx"],"errors":true,"version":"5.8.3"}

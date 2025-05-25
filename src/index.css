@@ -1,0 +1,163 @@
+@import "tailwindcss";
+@import "github-markdown-css/github-markdown.css";
+
+* {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: "Monumental";
+    src: url("./assets/fonts/Monumental.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@theme {
+    --font-poppins: "Poppins", "sans-serif";
+    --font-montserrat: "Montserrat", "sans-serif";
+    --font-jetbrains: "JetBrains Mono", "monospace";
+    --font-monumental: "Monumental", "sans-serif";
+    --font-inter: "Inter", "sans-serif";
+
+    --color-jb-gray-1: #1E1F22;
+    --color-jb-gray-2: #2B2D30;
+    --color-jb-gray-3: #393B40;
+    --color-jb-gray-4: #43454A;
+    --color-jb-gray-5: #4E5157;
+    --color-jb-gray-6: #5A5D63;
+    --color-jb-gray-7: #6F737A;
+    --color-jb-gray-8: #868A91;
+    --color-jb-gray-9: #9DA0A8;
+    --color-jb-gray-10: #B4B8BF;
+    --color-jb-gray-11: #CED0D6;
+    --color-jb-gray-12: #DFE1E5;
+    --color-jb-gray-13: #F0F1F2;
+    --color-jb-gray-14: #FFFFFF;
+
+    --color-jb-blue-1: #25324D;
+    --color-jb-blue-2: #2E436E;
+    --color-jb-blue-3: #35538F;
+    --color-jb-blue-4: #375FAD;
+    --color-jb-blue-5: #366ACF;
+    --color-jb-blue-6: #3574F0;
+    --color-jb-blue-7: #467FF2;
+    --color-jb-blue-8: #548AF7;
+    --color-jb-blue-9: #6B9BFA;
+    --color-jb-blue-10: #83ACFC;
+    --color-jb-blue-11: #99BBFF;
+
+    --color-jb-green-1: #253627;
+    --color-jb-green-2: #375239;
+    --color-jb-green-3: #436946;
+    --color-jb-green-4: #4E8052;
+    --color-jb-green-5: #57965C;
+    --color-jb-green-6: #5FAD65;
+    --color-jb-green-7: #73BD79;
+    --color-jb-green-8: #89CC8E;
+    --color-jb-green-9: #A0DBA5;
+    --color-jb-green-10: #B9EBBD;
+    --color-jb-green-11: #D4FAD7;
+
+    --color-jb-yellow-1: #3D3223;
+    --color-jb-yellow-2: #5E4D33;
+    --color-jb-yellow-3: #826A41;
+    --color-jb-yellow-4: #9E814A;
+    --color-jb-yellow-5: #BA9752;
+    --color-jb-yellow-6: #D6AE58;
+    --color-jb-yellow-7: #F2C55C;
+    --color-jb-yellow-8: #F5D273;
+    --color-jb-yellow-9: #F7DE8B;
+    --color-jb-yellow-10: #FCEBA4;
+    --color-jb-yellow-11: #FFF6BD;
+
+    --color-jb-red-1: #402929;
+    --color-jb-red-2: #5E3838;
+    --color-jb-red-3: #7A4343;
+    --color-jb-red-4: #9C4E4E;
+    --color-jb-red-5: #BD5757;
+    --color-jb-red-6: #DB5C5C;
+    --color-jb-red-7: #E37774;
+    --color-jb-red-8: #EB938D;
+    --color-jb-red-9: #F2B1AA;
+    --color-jb-red-10: #F7CCC6;
+    --color-jb-red-11: #FAE3DE;
+
+    --color-jb-orange-1: #45322B;
+    --color-jb-orange-2: #614438;
+    --color-jb-orange-3: #825845;
+    --color-jb-orange-4: #A36B4E;
+    --color-jb-orange-5: #C77D55;
+    --color-jb-orange-6: #E08855;
+    --color-jb-orange-7: #E5986C;
+    --color-jb-orange-8: #F0AC81;
+    --color-jb-orange-9: #F5BD98;
+    --color-jb-orange-10: #FACEAF;
+    --color-jb-orange-11: #FFDFC7;
+
+    --color-jb-purple-1: #2F2936;
+    --color-jb-purple-2: #433358;
+    --color-jb-purple-3: #583D7A;
+    --color-jb-purple-4: #6C469C;
+    --color-jb-purple-5: #8150BE;
+    --color-jb-purple-6: #955AE0;
+    --color-jb-purple-7: #A571E6;
+    --color-jb-purple-8: #B589EC;
+    --color-jb-purple-9: #C4A0F3;
+    --color-jb-purple-10: #D4B8F9;
+    --color-jb-purple-11: #E4CEFF;
+
+    --color-jb-teal-1: #1D3838;
+    --color-jb-teal-2: #1E4D4A;
+    --color-jb-teal-3: #20635D;
+    --color-jb-teal-4: #21786F;
+    --color-jb-teal-5: #238E82;
+    --color-jb-teal-6: #24A394;
+    --color-jb-teal-7: #42B1A4;
+    --color-jb-teal-8: #60C0B5;
+    --color-jb-teal-9: #7DCEC5;
+    --color-jb-teal-10: #9BDDD6;
+    --color-jb-teal-11: #B9EBE6;
+
+    --color-jb-default-text: #BDC0C9;
+    --color-jb-error: #FF5263;
+    --color-jb-warning: #FFCD59;
+    --color-jb-link: #548AF7;
+    --color-jb-todo: #82BA3D;
+}
+
+@keyframes loader-spin {
+    0% {
+        background-position: 0 0, 10px 10px, 20px 20px;
+    }
+    33% {
+        background-position: -30px 0, 10px 10px, 20px 20px;
+    }
+    66% {
+        background-position: -30px 0, 10px 40px, 20px 20px;
+    }
+    100% {
+        background-position: -30px 0, 10px 40px, 50px 20px;
+    }
+}
+
+.markdown-body {
+    font-family: var(--font-inter), sans-serif;
+
+    ul {
+        list-style-type: disc;
+        padding-left: 1.25rem; /* Tailwind px-5 */
+    }
+
+    ol {
+        list-style-type: decimal;
+        padding-left: 1.25rem;
+    }
+
+    blockquote {
+        border-left: 4px solid #ccc;
+        padding-left: 1rem;
+        color: #666;
+        font-style: italic;
+        margin: 1rem 0;
+    }
+}
