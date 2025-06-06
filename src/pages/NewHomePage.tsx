@@ -1,7 +1,6 @@
 import { Helmet } from 'react-helmet';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
-import { BoostView } from '../components/BoostViewer'
 import { UnderConstruction } from '../components/UnderConstruction'
 import HeroCTAButton from '../components/new/landing_page/HeroCTAButton'
 
@@ -15,20 +14,12 @@ function NewHomePage() {
         document.body.classList.add('bg-[#0A0A0A]', 'bg-[url(./assets/noise.png)]', 'bg-size-[1440px]');
     }, []);
 
-    const [BoostToggled, SetBoostToggled] = useState(false);
-
-    const toggleBoost = () => {
-        SetBoostToggled(prev => !prev);
-    };
-
     return (
         <>
             <Helmet>
                 <title>v4nixd.xyz</title>
             </Helmet>
-            {BoostToggled && (<BoostView/>)}
             {UNDER_CONSTRUCTION && (<UnderConstruction/>)}
-            <button className="fixed z-10 bottom-5 right-5 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors h-10 px-4 py-2 bg-[#282828] text-[#FAFAFA] hover:bg-[#282828]/50" onClick={toggleBoost}>Boost Bg Toggle</button>
             <header className="sticky top-0 z-10 flex w-full justify-between p-1.5 backdrop-blur-xl max-sm:border-b max-sm:border-white/20 sm:top-6 sm:mt-6 sm:px-80">
                 <a href={`https://${BASE_LINK}/beta/new`}>
                     <div className="flex items-center justify-center gap-2 text-center">
