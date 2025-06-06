@@ -1,5 +1,5 @@
-const API_URL = "http://localhost:9000";
-// const API_URL = "https://api.v4nixd.xyz";
+// const API_URL = "http://localhost:9000";
+const API_URL = "https://api.v4nixd.xyz";
 
 export async function uploadMarkdown(markdown: string): Promise<[string, number]> {
     const base64 = btoa(encodeURIComponent(markdown));

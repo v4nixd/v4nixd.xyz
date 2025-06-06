@@ -112,7 +112,8 @@ function AlphaPage() {
                 </div>
                 <p className="text-sm text-jb-gray-6 mt-[8px]"><span
                     className="text-jb-red-6 font-bold">Warning!</span> Without a password, anyone with the link can
-                    modify the file.</p>
+                    modify the file.
+                </p>
             </Modal>
 
             <Modal isOpen={isSuccessModalOpen} onClose={() => setIsSuccessModalOpen(false)} title={"Successfull upload"} submitText={"Copy link"} onSubmit={() => copyToClipboard(sharingLink)}>

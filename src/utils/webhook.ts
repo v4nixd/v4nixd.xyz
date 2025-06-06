@@ -1,5 +1,5 @@
-const apiUrl = 'http://localhost:9000/report/md';
-// const apiUrl = 'https://api.v4nixd.xyz/md/report';
+// const apiUrl = 'http://localhost:9000/report/md';
+const apiUrl = 'https://api.v4nixd.xyz/md/report';
 
 export async function sendWebhookReport(errorMessage: string): Promise<void> {
     try {
